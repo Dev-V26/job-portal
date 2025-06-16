@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Job Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<script>
+    // Redirect if not admin
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser !== "admin") {
+      alert("Access denied. Admins only.");
+      window.location.href = "login.html";
+    }
+  </script>
+  
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <a href="post-job.html">Post Job</a>
+      <a href="job-listings.html">View Jobs</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <main style="padding: 40px;">
+    <h2>Welcome Admin</h2>
+    <p>You can manage job postings and review submissions here.</p>
+  </main>
+</body>
+<script>
+    const user = localStorage.getItem("loggedInUser");
+    if (user !== "admin") {
+      alert("Access denied. Only Admin can access this page.");
+      window.location.href = "login.html";
+    }
+  </script>
+  
+</html>

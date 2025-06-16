@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Listings - Online Job Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f9fc;
+    }
+
+    header {
+      background-color: #2d89e5;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .job-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .job-listing {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .job-listing:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d89e5;
+      margin-bottom: 5px;
+    }
+
+    .job-meta {
+      color: #555;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+    .job-description {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .job-actions a {
+      padding: 10px 15px;
+      background-color: #2d89e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .job-actions a:hover {
+      background-color: #216bb3;
+    }
+
+    @media (max-width: 600px) {
+      .job-title {
+        font-size: 18px;
+      }
+
+      .job-description {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Available Job Listings</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post-job.html">Post Job</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="job-container">
+
+      <!-- Job Listing 1 -->
+      <div class="job-listing">
+        <div class="job-title">Frontend Developer</div>
+        <div class="job-meta">Tech Solutions · Remote · Full Time</div>
+        <div class="job-description">
+          Looking for a creative and motivated frontend developer with experience in React.js and strong HTML/CSS skills.
+        </div>
+        <div class="job-actions">
+          <a href="job-details.html">View Details</a>
+        </div>
+      </div>
+
+      <!-- Job Listing 2 -->
+      <div class="job-listing">
+        <div class="job-title">Backend Engineer</div>
+        <div class="job-meta">NextGen Softwares · Bangalore · Full Time</div>
+        <div class="job-description">
+          Backend developer needed with experience in Node.js, Express, and MongoDB. API design experience is a bonus.
+        </div>
+        <div class="job-actions">
+          <a href="job-details.html">View Details</a>
+        </div>
+      </div>
+
+      <!-- Job Listing 3 -->
+      <div class="job-listing">
+        <div class="job-title">UI/UX Designer</div>
+        <div class="job-meta">Creative Minds Inc · New York · Contract</div>
+        <div class="job-description">
+          Design intuitive and engaging user interfaces. Must have experience with Figma or Adobe XD and responsive design.
+        </div>
+        <div class="job-actions">
+          <a href="job-details.html">View Details</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Job Portal</title>
+  
+  <!-- Google Fonts for headline and subtitle -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Online Job Portal</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="job-listings.html">Jobs</a>
+      <a href="post-job.html">Post Job</a>
+      <a href="Admin-dashbord.html">Admin Dashboard</a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <!-- 🔗 Use an image directly from the internet (Google image link) -->
+      <img src="https://st4.depositphotos.com/22162388/25002/i/1600/depositphotos_250022376-stock-photo-job-search-hiring-recruitment-send.jpg" alt="Job Portal Banner" class="hero-image" />
+      <!-- Replace the above URL with a valid direct image link -->
+
+      <h2 class="hero-title">Find Your Dream Job</h2>
+      <p class="hero-subtitle">Browse job openings across industries.</p>
+      <a href="job-listings.html" class="btn">View Jobs</a>
+    </section>
+  </main>
+
+  <script src="js/main.js">
+     document.getElementById('view-jobs-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    if (isLoggedIn) {
+      // Redirect to jobs page
+      window.location.href = "job-listings.html";
+    } else {
+      alert("Please login first to view job listings.");
+      window.location.href = "login.html";
+    }
+  });
+  </script>
+</body>
+</html>
